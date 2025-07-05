@@ -1,4 +1,4 @@
-module github.com/aldinokemal/go-whatsapp-web-multidevice
+module github.com/aldinokemal/go-whatsapp-web-multidevice/src
 
 go 1.24.0
 

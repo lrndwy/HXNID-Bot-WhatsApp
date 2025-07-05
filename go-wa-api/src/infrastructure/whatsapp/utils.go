@@ -16,8 +16,9 @@ import (
 	"github.com/sirupsen/logrus"
 	"go.mau.fi/whatsmeow/proto/waE2E"
 
-	"github.com/aldinokemal/go-whatsapp-web-multidevice/config"
-	pkgError "github.com/aldinokemal/go-whatsapp-web-multidevice/pkg/error"
+	"github.com/aldinokemal/go-whatsapp-web-multidevice/src/config"
+	pkgError "github.com/aldinokemal/go-whatsapp-web-multidevice/src/pkg/error"
+	"github.com/aldinokemal/go-whatsapp-web-multidevice/src/pkg/utils"
 	"go.mau.fi/whatsmeow"
 	"go.mau.fi/whatsmeow/types"
 	"go.mau.fi/whatsmeow/types/events"
