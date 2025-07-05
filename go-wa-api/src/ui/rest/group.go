@@ -3,9 +3,9 @@ package rest
 import (
 	"fmt"
 
-	domainGroup "github.com/aldinokemal/go-whatsapp-web-multidevice/domains/group"
-	"github.com/aldinokemal/go-whatsapp-web-multidevice/infrastructure/whatsapp"
-	"github.com/aldinokemal/go-whatsapp-web-multidevice/pkg/utils"
+	domainGroup "github.com/lrndwy/HXNID-Bot-WhatsApp/go-wa-api/domains/group"
+	"github.com/lrndwy/HXNID-Bot-WhatsApp/go-wa-api/infrastructure/whatsapp"
+	"github.com/lrndwy/HXNID-Bot-WhatsApp/go-wa-api/pkg/utils"
 	"github.com/gofiber/fiber/v2"
 	"go.mau.fi/whatsmeow"
 )

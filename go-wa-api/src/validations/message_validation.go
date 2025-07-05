@@ -3,9 +3,9 @@ package validations
 import (
 	"context"
 
-	"github.com/aldinokemal/go-whatsapp-web-multidevice/domains/message"
-	domainMessage "github.com/aldinokemal/go-whatsapp-web-multidevice/domains/message"
-	pkgError "github.com/aldinokemal/go-whatsapp-web-multidevice/pkg/error"
+	"github.com/lrndwy/HXNID-Bot-WhatsApp/go-wa-api/domains/message"
+	domainMessage "github.com/lrndwy/HXNID-Bot-WhatsApp/go-wa-api/domains/message"
+	pkgError "github.com/lrndwy/HXNID-Bot-WhatsApp/go-wa-api/pkg/error"
 	validation "github.com/go-ozzo/ozzo-validation/v4"
 )
 

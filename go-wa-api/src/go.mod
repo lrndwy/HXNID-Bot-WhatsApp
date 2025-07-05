@@ -1,4 +1,4 @@
-module github.com/aldinokemal/go-whatsapp-web-multidevice
+module github.com/lrndwy/HXNID-Bot-WhatsApp/go-wa-api
 
 go 1.24.0
 

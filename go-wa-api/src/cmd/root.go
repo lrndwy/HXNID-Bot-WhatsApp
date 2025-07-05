@@ -8,16 +8,16 @@ import (
 	"strings"
 	"time"
 
-	"github.com/aldinokemal/go-whatsapp-web-multidevice/config"
-	domainApp "github.com/aldinokemal/go-whatsapp-web-multidevice/domains/app"
-	domainGroup "github.com/aldinokemal/go-whatsapp-web-multidevice/domains/group"
-	domainMessage "github.com/aldinokemal/go-whatsapp-web-multidevice/domains/message"
-	domainNewsletter "github.com/aldinokemal/go-whatsapp-web-multidevice/domains/newsletter"
-	domainSend "github.com/aldinokemal/go-whatsapp-web-multidevice/domains/send"
-	domainUser "github.com/aldinokemal/go-whatsapp-web-multidevice/domains/user"
-	"github.com/aldinokemal/go-whatsapp-web-multidevice/infrastructure/whatsapp"
-	"github.com/aldinokemal/go-whatsapp-web-multidevice/pkg/utils"
-	"github.com/aldinokemal/go-whatsapp-web-multidevice/usecase"
+	"github.com/lrndwy/HXNID-Bot-WhatsApp/go-wa-api/config"
+	domainApp "github.com/lrndwy/HXNID-Bot-WhatsApp/go-wa-api/domains/app"
+	domainGroup "github.com/lrndwy/HXNID-Bot-WhatsApp/go-wa-api/domains/group"
+	domainMessage "github.com/lrndwy/HXNID-Bot-WhatsApp/go-wa-api/domains/message"
+	domainNewsletter "github.com/lrndwy/HXNID-Bot-WhatsApp/go-wa-api/domains/newsletter"
+	domainSend "github.com/lrndwy/HXNID-Bot-WhatsApp/go-wa-api/domains/send"
+	domainUser "github.com/lrndwy/HXNID-Bot-WhatsApp/go-wa-api/domains/user"
+	"github.com/lrndwy/HXNID-Bot-WhatsApp/go-wa-api/infrastructure/whatsapp"
+	"github.com/lrndwy/HXNID-Bot-WhatsApp/go-wa-api/pkg/utils"
+	"github.com/lrndwy/HXNID-Bot-WhatsApp/go-wa-api/usecase"
 	"github.com/sirupsen/logrus"
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"
@@ -48,7 +48,7 @@ var (
 // rootCmd represents the base command when called without any subcommands
 var rootCmd = &cobra.Command{
 	Short: "Send free whatsapp API",
-	Long: `This application is from clone https://github.com/aldinokemal/go-whatsapp-web-multidevice, 
+	Long: `This application is from clone https://github.com/lrndwy/HXNID-Bot-WhatsApp/go-wa-api,
 you can send whatsapp over http api but your whatsapp account have to be multi device version`,
 }
 

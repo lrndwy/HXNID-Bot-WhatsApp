@@ -5,9 +5,9 @@ import (
 	"fmt"
 	"time"
 
-	domainMessage "github.com/aldinokemal/go-whatsapp-web-multidevice/domains/message"
-	"github.com/aldinokemal/go-whatsapp-web-multidevice/infrastructure/whatsapp"
-	"github.com/aldinokemal/go-whatsapp-web-multidevice/validations"
+	domainMessage "github.com/lrndwy/HXNID-Bot-WhatsApp/go-wa-api/domains/message"
+	"github.com/lrndwy/HXNID-Bot-WhatsApp/go-wa-api/infrastructure/whatsapp"
+	"github.com/lrndwy/HXNID-Bot-WhatsApp/go-wa-api/validations"
 	"github.com/sirupsen/logrus"
 	"go.mau.fi/whatsmeow"
 	"go.mau.fi/whatsmeow/appstate"

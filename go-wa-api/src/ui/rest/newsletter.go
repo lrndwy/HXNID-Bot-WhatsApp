@@ -1,8 +1,8 @@
 package rest
 
 import (
-	domainNewsletter "github.com/aldinokemal/go-whatsapp-web-multidevice/domains/newsletter"
-	"github.com/aldinokemal/go-whatsapp-web-multidevice/pkg/utils"
+	domainNewsletter "github.com/lrndwy/HXNID-Bot-WhatsApp/go-wa-api/domains/newsletter"
+	"github.com/lrndwy/HXNID-Bot-WhatsApp/go-wa-api/pkg/utils"
 	"github.com/gofiber/fiber/v2"
 )
 

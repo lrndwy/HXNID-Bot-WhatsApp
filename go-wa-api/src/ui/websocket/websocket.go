@@ -5,7 +5,7 @@ import (
 	"encoding/json"
 	"log"
 
-	domainApp "github.com/aldinokemal/go-whatsapp-web-multidevice/domains/app"
+	domainApp "github.com/lrndwy/HXNID-Bot-WhatsApp/go-wa-api/domains/app"
 	"github.com/gofiber/fiber/v2"
 	"github.com/gofiber/websocket/v2"
 )

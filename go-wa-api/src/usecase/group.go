@@ -4,11 +4,11 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/aldinokemal/go-whatsapp-web-multidevice/config"
-	domainGroup "github.com/aldinokemal/go-whatsapp-web-multidevice/domains/group"
-	"github.com/aldinokemal/go-whatsapp-web-multidevice/infrastructure/whatsapp"
-	pkgError "github.com/aldinokemal/go-whatsapp-web-multidevice/pkg/error"
-	"github.com/aldinokemal/go-whatsapp-web-multidevice/validations"
+	"github.com/lrndwy/HXNID-Bot-WhatsApp/go-wa-api/config"
+	domainGroup "github.com/lrndwy/HXNID-Bot-WhatsApp/go-wa-api/domains/group"
+	"github.com/lrndwy/HXNID-Bot-WhatsApp/go-wa-api/infrastructure/whatsapp"
+	pkgError "github.com/lrndwy/HXNID-Bot-WhatsApp/go-wa-api/pkg/error"
+	"github.com/lrndwy/HXNID-Bot-WhatsApp/go-wa-api/validations"
 	"go.mau.fi/whatsmeow"
 	"go.mau.fi/whatsmeow/types"
 )

@@ -3,9 +3,9 @@ package usecase
 import (
 	"context"
 
-	domainNewsletter "github.com/aldinokemal/go-whatsapp-web-multidevice/domains/newsletter"
-	"github.com/aldinokemal/go-whatsapp-web-multidevice/infrastructure/whatsapp"
-	"github.com/aldinokemal/go-whatsapp-web-multidevice/validations"
+	domainNewsletter "github.com/lrndwy/HXNID-Bot-WhatsApp/go-wa-api/domains/newsletter"
+	"github.com/lrndwy/HXNID-Bot-WhatsApp/go-wa-api/infrastructure/whatsapp"
+	"github.com/lrndwy/HXNID-Bot-WhatsApp/go-wa-api/validations"
 	"go.mau.fi/whatsmeow"
 )
 

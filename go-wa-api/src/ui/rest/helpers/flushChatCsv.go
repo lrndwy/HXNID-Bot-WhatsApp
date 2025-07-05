@@ -5,7 +5,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/aldinokemal/go-whatsapp-web-multidevice/config"
+	"github.com/lrndwy/HXNID-Bot-WhatsApp/go-wa-api/config"
 	"github.com/sirupsen/logrus"
 )
 

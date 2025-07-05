@@ -3,8 +3,8 @@ package validations
 import (
 	"context"
 
-	domainGroup "github.com/aldinokemal/go-whatsapp-web-multidevice/domains/group"
-	pkgError "github.com/aldinokemal/go-whatsapp-web-multidevice/pkg/error"
+	domainGroup "github.com/lrndwy/HXNID-Bot-WhatsApp/go-wa-api/domains/group"
+	pkgError "github.com/lrndwy/HXNID-Bot-WhatsApp/go-wa-api/pkg/error"
 	validation "github.com/go-ozzo/ozzo-validation/v4"
 	"go.mau.fi/whatsmeow"
 )
