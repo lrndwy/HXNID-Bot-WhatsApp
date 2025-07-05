@@ -1,10 +1,24 @@
-############################
-# STEP 1 build executable binary
-############################
+FROM golang:1.21 AS cloner
+
+# Install git
+RUN apt-get update && apt-get install -y git
+
+# Set workdir
+WORKDIR /app
+
+# Clone repo (ganti URL dengan repo Anda)
+RUN git clone https://github.com/aldinokemal/go-whatsapp-web-multidevice.git .
+
+# Copy env file dari build context (jika ada)
+COPY .env /go-whatsapp-web-multidevice/src/.env
+
+# Build binary
+# Fetch dependencies.
+
 FROM golang:1.24-alpine3.20 AS builder
 RUN apk update && apk add --no-cache gcc musl-dev gcompat
 WORKDIR /whatsapp
-COPY ./src .
+COPY --from=cloner /app/src .
 
 # Fetch dependencies.
 RUN go mod download

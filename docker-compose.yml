@@ -1,18 +1,17 @@
 services:
   whatsapp_go:
+    build:
+      context: .
+      dockerfile: go-multidevice.Dockerfile
+    ports:
+      - "3000:3000"
+    env_file:
+      - .env
     logging:
       driver: "json-file"
       options:
         max-size: "200k"
         max-file: "10"
-    build:
-      context: ./go-wa-api
-      dockerfile: ./docker/golang.Dockerfile
-    restart: "on-failure"
-    ports:
-      - "3000:3000"
-    env_file:
-      - ./.env
     networks:
       - hxnid-network
 
