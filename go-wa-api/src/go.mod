@@ -26,6 +26,8 @@ require (
 	google.golang.org/protobuf v1.36.6
 )
 
+replace github.com/lrndwy/HXNID-Bot-WhatsApp/go-wa-api => ../
+
 require (
 	filippo.io/edwards25519 v1.1.0 // indirect
 	github.com/andybalholm/brotli v1.2.0 // indirect
