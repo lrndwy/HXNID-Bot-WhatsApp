@@ -4,10 +4,9 @@ import (
 	"fmt"
 	"log"
 
-	"github.com/aldinokemal/go-whatsapp-web-multidevice/src/config"
-	"github.com/aldinokemal/go-whatsapp-web-multidevice/src/infrastructure/whatsapp"
-	"github.com/aldinokemal/go-whatsapp-web-multidevice/src/ui/mcp"
-	"github.com/aldinokemal/go-whatsapp-web-multidevice/src/ui/rest/helpers"
+	"github.com/aldinokemal/go-whatsapp-web-multidevice/config"
+	"github.com/aldinokemal/go-whatsapp-web-multidevice/ui/mcp"
+	"github.com/aldinokemal/go-whatsapp-web-multidevice/ui/rest/helpers"
 	"github.com/mark3labs/mcp-go/server"
 	"github.com/spf13/cobra"
 )

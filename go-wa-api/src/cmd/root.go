@@ -8,16 +8,16 @@ import (
 	"strings"
 	"time"
 
-	"github.com/aldinokemal/go-whatsapp-web-multidevice/src/config"
-	domainApp "github.com/aldinokemal/go-whatsapp-web-multidevice/src/domains/app"
-	domainGroup "github.com/aldinokemal/go-whatsapp-web-multidevice/src/domains/group"
-	domainMessage "github.com/aldinokemal/go-whatsapp-web-multidevice/src/domains/message"
-	domainNewsletter "github.com/aldinokemal/go-whatsapp-web-multidevice/src/domains/newsletter"
-	domainSend "github.com/aldinokemal/go-whatsapp-web-multidevice/src/domains/send"
-	domainUser "github.com/aldinokemal/go-whatsapp-web-multidevice/src/domains/user"
-	"github.com/aldinokemal/go-whatsapp-web-multidevice/src/infrastructure/whatsapp"
-	"github.com/aldinokemal/go-whatsapp-web-multidevice/src/pkg/utils"
-	"github.com/aldinokemal/go-whatsapp-web-multidevice/src/usecase"
+	"github.com/aldinokemal/go-whatsapp-web-multidevice/config"
+	domainApp "github.com/aldinokemal/go-whatsapp-web-multidevice/domains/app"
+	domainGroup "github.com/aldinokemal/go-whatsapp-web-multidevice/domains/group"
+	domainMessage "github.com/aldinokemal/go-whatsapp-web-multidevice/domains/message"
+	domainNewsletter "github.com/aldinokemal/go-whatsapp-web-multidevice/domains/newsletter"
+	domainSend "github.com/aldinokemal/go-whatsapp-web-multidevice/domains/send"
+	domainUser "github.com/aldinokemal/go-whatsapp-web-multidevice/domains/user"
+	"github.com/aldinokemal/go-whatsapp-web-multidevice/infrastructure/whatsapp"
+	"github.com/aldinokemal/go-whatsapp-web-multidevice/pkg/utils"
+	"github.com/aldinokemal/go-whatsapp-web-multidevice/usecase"
 	"github.com/sirupsen/logrus"
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"
@@ -48,7 +48,7 @@ var (
 // rootCmd represents the base command when called without any subcommands
 var rootCmd = &cobra.Command{
 	Short: "Send free whatsapp API",
-	Long: `This application is from clone https://github.com/aldinokemal/go-whatsapp-web-multidevice,
+	Long: `This application is from clone https://github.com/aldinokemal/go-whatsapp-web-multidevice, 
 you can send whatsapp over http api but your whatsapp account have to be multi device version`,
 }
 
