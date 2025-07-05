@@ -1,0 +1,17 @@
+[project]
+name = "python-wa-bot"
+version = "0.1.0"
+description = "A WhatsApp bot example using go-wa-api"
+dependencies = [
+    "Flask>=2.0.0",
+    "requests>=2.28.0",
+    "python-dotenv>=0.21.0",
+]
+requires-python = ">=3.8"
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["."]

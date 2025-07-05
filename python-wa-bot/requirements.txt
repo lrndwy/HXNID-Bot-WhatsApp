@@ -1,0 +1,4 @@
+requests
+Flask
+python-dotenv
+python-magic # For file type detection, if needed for send_file/send_audio/send_video
