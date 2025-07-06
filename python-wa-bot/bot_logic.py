@@ -2,16 +2,10 @@ import os
 import requests
 import json
 import subprocess # Add this import
-import datetime
-import pytz
+import pendulum
 
 # Get timezone from environment variable, default to 'Asia/Jakarta'
-TIMEZONE = os.getenv("TIMEZONE", "Asia/Jakarta")
-try:
-    tz = pytz.timezone(TIMEZONE)
-except pytz.exceptions.UnknownTimeZoneError:
-    print(f"Warning: Unknown timezone '{TIMEZONE}'. Defaulting to 'Asia/Jakarta'.")
-    tz = pytz.timezone("Asia/Jakarta")
+timezone_name = os.getenv("TIMEZONE", "Asia/Jakarta")
 
 class BotLogic:
     def __init__(self, wa_client, allow_self_message=False):
@@ -39,8 +33,8 @@ class BotLogic:
                 self._send_current_time(sender)
 
     def _send_current_time(self, sender):
-        current_time = datetime.datetime.now(tz).strftime("%H:%M:%S %Z%z")
-        formatted_time_string = f"Current time: {current_time}"
+        current_time = pendulum.now(tz=timezone_name)
+        formatted_time_string = f"Current time: {current_time.format('HH:mm:ss ZZ')}"
         print(f"Sending current time '{formatted_time_string}' to {sender}")
         self.wa_client.send_message(sender, formatted_time_string)
 
