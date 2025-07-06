@@ -12,3 +12,4 @@ storages
 bin
 .env.local
 .env.*.local
+whatsapp-go

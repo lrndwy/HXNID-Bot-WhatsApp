@@ -2,6 +2,16 @@ import os
 import requests
 import json
 import subprocess # Add this import
+import datetime
+import pytz
+
+# Get timezone from environment variable, default to 'Asia/Jakarta'
+TIMEZONE = os.getenv("TIMEZONE", "Asia/Jakarta")
+try:
+    tz = pytz.timezone(TIMEZONE)
+except pytz.exceptions.UnknownTimeZoneError:
+    print(f"Warning: Unknown timezone '{TIMEZONE}'. Defaulting to 'Asia/Jakarta'.")
+    tz = pytz.timezone("Asia/Jakarta")
 
 class BotLogic:
     def __init__(self, wa_client, allow_self_message=False):
@@ -25,6 +35,14 @@ class BotLogic:
             # Add more bot logic here for other commands or interactions
             # elif message_content.lower() == "hello":
             #     self.wa_client.send_message(sender, "Hi there!")
+            elif message_content_lower.startswith("time"):
+                self._send_current_time(sender)
+
+    def _send_current_time(self, sender):
+        current_time = datetime.datetime.now(tz).strftime("%H:%M:%S %Z%z")
+        formatted_time_string = f"Current time: {current_time}"
+        print(f"Sending current time '{formatted_time_string}' to {sender}")
+        self.wa_client.send_message(sender, formatted_time_string)
 
     def _send_menu(self, sender):
         menu_text = (
@@ -39,8 +57,9 @@ class BotLogic:
             "8. `send audio`: Mengirim audio.\n"
             "9. `send poll`: Mengirim polling.\n"
             "10. `send presence <type>`: Mengatur status kehadiran (available, unavailable, composing, paused, recording).\n"
-            "11. `ping`: Membalas dengan 'pong'.\n\n"
-            "Contoh: `send text Halo dunia!`"
+            "11. `ping`: Membalas dengan 'pong'.\n"
+            "12. `time`: Mendapatkan waktu saat ini.\n\n"
+            # "Contoh: `send text Halo dunia!`"
         )
         self.wa_client.send_message(sender, menu_text)
 
