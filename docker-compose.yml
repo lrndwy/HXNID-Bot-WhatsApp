@@ -4,7 +4,7 @@ services:
       context: .
       dockerfile: go-multidevice.Dockerfile
     ports:
-      - "3333:3000"
+      - "3333:3333"
     env_file:
       - .env
     logging:
@@ -29,7 +29,7 @@ services:
       dockerfile: ./docker/python.Dockerfile
     restart: "on-failure"
     ports:
-      - "5050:5000"
+      - "5050:5050"
     env_file:
       - ./.env
     networks:
