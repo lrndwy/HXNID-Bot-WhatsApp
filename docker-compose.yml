@@ -29,7 +29,7 @@ services:
       dockerfile: ./docker/python.Dockerfile
     restart: "on-failure"
     ports:
-      - "5555:5000"
+      - "5050:5000"
     env_file:
       - ./.env
     networks:
