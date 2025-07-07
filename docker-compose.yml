@@ -7,14 +7,8 @@ services:
       - "3333:3000"
     volumes:
       - whatsapp:/app/storages
-    command:
-      - rest
-      - --basic-auth=admin:admin
-      - --port=3000
-      - --debug=true
-      - --os=Chrome
-      - --account-validation=false
-      - --webhook=http://whatsapp_python:5000/webhook
+    env_file:
+        - ./.env
 
   whatsapp_python:
     logging:
