@@ -14,7 +14,7 @@ services:
       - --debug=true
       - --os=Chrome
       - --account-validation=false
-      - --webhook=http://whatsapp_python:5050/webhook
+      - --webhook=http://whatsapp_python:5000/webhook
 
   whatsapp_python:
     logging:
