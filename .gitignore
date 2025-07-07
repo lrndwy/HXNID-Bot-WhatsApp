@@ -12,4 +12,36 @@ storages
 bin
 .env.local
 .env.*.local
-whatsapp-go
+whatsapp
+# Byte-code files
+*.pyc
+__pycache__/
+
+# Virtual environment
+.venv/
+env/
+venv/
+
+# IDE specific files
+.idea/
+.vscode/
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Test results
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Distribution / build outputs
+dist/
+build/
+*.egg-info/
+
+# OS generated files
+.DS_Store
+Thumbs.db
+

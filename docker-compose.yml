@@ -1,22 +1,20 @@
 services:
   whatsapp_go:
-    build:
-      context: .
-      dockerfile: go-multidevice.Dockerfile
+    image: aldinokemal2104/go-whatsapp-web-multidevice:latest
+    container_name: whatsapp
+    restart: always
     ports:
-      - "3001:3000"
-    env_file:
-      - .env
-    logging:
-      driver: "json-file"
-      options:
-        max-size: "200k"
-        max-file: "10"
-    networks:
-      - hxnid-network
+      - "3333:3000"
     volumes:
-      - ./whatsapp-go:/app/storages
-    restart: "on-failure"
+      - whatsapp:/app/storages
+    command:
+      - rest
+      - --basic-auth=admin:admin
+      - --port=3000
+      - --debug=true
+      - --os=Chrome
+      - --account-validation=false
+      - --webhook=http://whatsapp_python:5050/webhook
 
   whatsapp_python:
     logging:
@@ -25,8 +23,8 @@ services:
         max-size: "200k"
         max-file: "10"
     build:
-      context: ./python-wa-bot
-      dockerfile: ./docker/python.Dockerfile
+      context: .
+      dockerfile: Dockerfile
     restart: "on-failure"
     ports:
       - "5555:5000"
@@ -40,3 +38,6 @@ services:
 networks:
   hxnid-network:
     driver: bridge
+
+volumes:
+  whatsapp:
